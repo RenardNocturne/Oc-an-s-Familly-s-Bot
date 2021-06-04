@@ -1,0 +1,99 @@
+// Polices
+/*Baloo Tammudu 2: */ @import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&display=swap');
+/* Exo 2: */ @import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');
+
+//Variablies
+$txtColor: #000;
+
+// Mixins:
+@mixin txt ($size: 24px, $weight: 400, $color: $txtColor, $fontFa: 'Exo 2') {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+    font-family: $fontFa;
+}
+
+@mixin content () {
+    width: 75%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+@mixin h1Content ($color) {
+    @include txt (42px, 600, $color, 'Exo 2');
+    margin-bottom: 15px;
+}
+
+* {
+    cursor: default;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+
+    h1 {
+        @include txt (72px, 600, transparent, 'Baloo Tammudu 2');
+        background: linear-gradient(to right, #002D66 5%, #7E2F42 53%, #c9a00b 91%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        position: relative;
+    }
+
+    .subtitle {
+        @include txt (46px);
+        margin-top: -15px;
+    }
+
+    margin-bottom: 10%;
+}
+
+.wrappper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.box {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 55px;
+
+    .content {
+        @include content ();
+        height: 100%;
+
+        .desc {
+            @include h1Content(#002D66);
+        }
+
+        .infos {
+            @include h1Content(#7E2F42);
+        }
+
+        .misc {
+            @include h1Content(#c9a00b);
+        }
+
+        p {
+            @include txt (36px);
+        }
+    }
+
+    .img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 25%;
+    }
+}
