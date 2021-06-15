@@ -64,7 +64,6 @@ body {
   margin-bottom: 5%;
 }
 .top .title {
-  width: 50%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -77,13 +76,14 @@ body {
   background: linear-gradient(to right, #0049a8 5%, #BA1414 53%, #c9a00b 91%);
   background-clip: text;
   -webkit-background-clip: text;
-  position: relative;
+  text-align: center;
 }
 .top .links {
   width: 25%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  text-align: center;
 }
 .top .links a {
   text-decoration: none;
@@ -159,6 +159,7 @@ body {
   color: #0049a8;
   font-family: "Exo 2", sans-serif;
   margin-bottom: 15px;
+  text-align: center;
 }
 .box .content .infos {
   font-size: 42px;
@@ -166,6 +167,7 @@ body {
   color: #BA1414;
   font-family: "Exo 2", sans-serif;
   margin-bottom: 15px;
+  text-align: center;
 }
 .box .content .misc {
   font-size: 42px;
@@ -173,6 +175,7 @@ body {
   color: #c9a00b;
   font-family: "Exo 2", sans-serif;
   margin-bottom: 15px;
+  text-align: center;
 }
 .box .content p {
   font-size: 36px;
@@ -183,11 +186,24 @@ body {
   text-align: center;
   line-height: 55px;
 }
+.box .img1 img {
+  transition: all 0.3s;
+  width: 200px;
+  border-radius: 50%;
+}
+.box .img1 img:hover {
+  box-shadow: 7px 7px 25px #403A3E;
+  transform: translateY(-6px);
+}
 .box .img {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 25%;
+}
+
+.img3 img {
+  width: 170px;
 }
 
 .bump {
@@ -196,6 +212,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: -55px;
 }
 .bump .jump {
   font-size: 36px;
@@ -212,7 +229,7 @@ body {
   background: none;
   bottom: -10px;
   content: "";
-  height: 2px;
+  height: 3px;
   left: 50%;
   position: absolute;
   background: #BA1414;
@@ -222,6 +239,48 @@ body {
 .bump .jump:hover:after {
   width: 100%;
   left: 0;
+}
+
+@media screen and (max-width: 1273px) {
+  .top {
+    flex-direction: column;
+    margin-top: -50px;
+  }
+  .top .links {
+    width: auto;
+    margin-top: -50px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .title {
+    margin-top: 25px;
+    line-height: 90px;
+  }
+
+  .box {
+    flex-direction: column;
+  }
+  .box .img {
+    width: 100%;
+  }
+  .box .img1 {
+    margin: 50px 0 25px 0;
+  }
+  .box .content {
+    width: 90%;
+    padding: 0 5%;
+  }
+  .box img {
+    width: 15%;
+  }
+
+  .bump .jump {
+    font-size: 24px;
+  }
+
+  .box2 {
+    flex-direction: column-reverse;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

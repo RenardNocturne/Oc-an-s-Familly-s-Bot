@@ -70,8 +70,8 @@ ScrollReveal().reveal('.img3', {
 
 ScrollReveal().reveal('.jump', {
     duration: 1500,
-    distance: "50%",
-    origin: 'right',
+    distance: "15%",
+    origin: 'left',
     scale: 0.7,
     delay: 200,
 });
