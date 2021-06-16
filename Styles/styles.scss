@@ -94,29 +94,28 @@ body {
 .top {
     display: flex;
     align-items: center;
-    justify-content: center;
     width: 100%;
+    margin-top: 1.5%;
     margin-bottom: 5%;
+    justify-content: center;
 
     h1 {
-        @include txt (72px, 600, transparent, 'Baloo Tammudu 2');
+        @include txt (72px, 600, transparent, 'Exo 2');
         background: linear-gradient(to right, #0049a8 5%, #BA1414 53%, #c9a00b 91%);
         background-clip: text;
         -webkit-background-clip: text;
         text-align: center;
-        width: 80%;
+        margin: 0 0 0 300px;
     }
 
-    a {
-        text-decoration: none;
+    .invite {
         text-transform: uppercase;
-        @include txt (42px, 600, transparent);
+        @include txt (42px, 600, transparent, "Exo 2");
         background: linear-gradient(to right, #0049a8 5%, #BA1414 53%, #c9a00b 91%);
         background-clip: text;
         -webkit-background-clip: text;
-        transition: transform 0.5s ease;
         cursor: pointer;
-        margin-left: 0;
+        margin-left: 150px;
 
         &:after {    
 
@@ -128,8 +127,6 @@ body {
         }
 
         &:hover {
-            transform: translate(4px, -4px);
-
             &:after {
                 width: calc(100% + 8px); 
             }
@@ -250,6 +247,15 @@ body {
 @media screen and (max-width: 1273px) {
     .top {
         flex-direction: column;
+
+        h1 {
+            margin-left: 0;
+        }
+
+        .invite {
+            margin-left: 0;
+            margin-top: 25px;
+        }
     }
 }
 
@@ -259,10 +265,8 @@ body {
         h1 {
             line-height: 90px;
         }
-        a {
-            margin-top: -50px;
-        }
     }
+
     .box {
         flex-direction: column;
 
@@ -280,7 +284,7 @@ body {
 
             p {
                 font-size: 28px;
-                line-height: calc(normal + 1px);
+                line-height: calc(normal + 2px);
             }
         }
 

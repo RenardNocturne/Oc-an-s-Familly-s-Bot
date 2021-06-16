@@ -59,23 +59,23 @@ body {
 .top {
   display: flex;
   align-items: center;
-  justify-content: center;
   width: 100%;
+  margin-top: 1.5%;
   margin-bottom: 5%;
+  justify-content: center;
 }
 .top h1 {
   font-size: 72px;
   font-weight: 600;
   color: transparent;
-  font-family: "Baloo Tammudu 2", sans-serif;
+  font-family: "Exo 2", sans-serif;
   background: linear-gradient(to right, #0049a8 5%, #BA1414 53%, #c9a00b 91%);
   background-clip: text;
   -webkit-background-clip: text;
   text-align: center;
-  width: 80%;
+  margin: 0 0 0 300px;
 }
-.top a {
-  text-decoration: none;
+.top .invite {
   text-transform: uppercase;
   font-size: 42px;
   font-weight: 600;
@@ -84,11 +84,10 @@ body {
   background: linear-gradient(to right, #0049a8 5%, #BA1414 53%, #c9a00b 91%);
   background-clip: text;
   -webkit-background-clip: text;
-  transition: transform 0.5s ease;
   cursor: pointer;
-  margin-left: 0;
+  margin-left: 150px;
 }
-.top a:after {
+.top .invite:after {
   bottom: -6px;
   content: "";
   height: 4px;
@@ -98,7 +97,7 @@ body {
   transition: width 0.5s ease, height 0.5s ease;
   width: 0;
 }
-.top a:before {
+.top .invite:before {
   bottom: -6px;
   content: "";
   height: 0px;
@@ -108,13 +107,10 @@ body {
   transition: width 0.5s ease, height 0.5s ease;
   width: 4px;
 }
-.top a:hover {
-  transform: translate(4px, -4px);
-}
-.top a:hover:after {
+.top .invite:hover:after {
   width: calc(100% + 8px);
 }
-.top a:hover:before {
+.top .invite:hover:before {
   height: 50%;
 }
 
@@ -234,13 +230,17 @@ body {
   .top {
     flex-direction: column;
   }
+  .top h1 {
+    margin-left: 0;
+  }
+  .top .invite {
+    margin-left: 0;
+    margin-top: 25px;
+  }
 }
 @media screen and (max-width: 1000px) {
   .top h1 {
     line-height: 90px;
-  }
-  .top a {
-    margin-top: -50px;
   }
 
   .box {
@@ -258,7 +258,7 @@ body {
   }
   .box .content p {
     font-size: 28px;
-    line-height: calc(normal + 1px);
+    line-height: calc(normal + 2px);
   }
   .box img {
     width: 15%;

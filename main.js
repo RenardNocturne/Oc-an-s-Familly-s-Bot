@@ -24,7 +24,7 @@ ScrollReveal().reveal('.invite', {
 
 ScrollReveal().reveal('.img1', {
     duration: 1000,
-    distance: '100%',
+    distance: '10%',
     origin: 'left',
     scale: 0.7,
     delay: 250,
