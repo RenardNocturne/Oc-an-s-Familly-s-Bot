@@ -182,28 +182,29 @@ body {
         }
     }
 
-    .img1 img {
-
-        transition: all 0.3s;
-        width: 200px;
-        border-radius: 50%;
-
-        &:hover {
-            box-shadow: 7px 7px 25px #403A3E;
-            transform: translateY(-6px);
-        }
-    }
-
     .img {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 25%;
-    }
-}
 
-.img3 img {
-    width: 170px;
+        img {
+            transition: all 0.3s;
+            width: 200px;
+        }
+        
+        &1, &2 {
+
+            img {
+                border-radius: 50%;
+
+                &:hover {
+                    box-shadow: 7px 7px 25px #403A3E;
+                    transform: translateY(-6px);
+                }
+            }    
+        }
+    }
 }
 
 .bump  {
@@ -270,28 +271,21 @@ body {
     .box {
         flex-direction: column;
 
-        .img {
-            width: 100%;
-
-            &1 {
+            .img {
                 margin: 50px 0 25px 0;
+                width: auto;
+            }
+
+            .content {
+                width: 90%;
+                padding: 0 5%;
+    
+                p {
+                    font-size: 28px;
+                    line-height: calc(normal + 2px);
+                }
             }
         }
-
-        .content {
-            width: 90%;
-            padding: 0 5%;
-
-            p {
-                font-size: 28px;
-                line-height: calc(normal + 2px);
-            }
-        }
-
-        img {
-            width: 15%;
-        }
-    }
 
     .bump .jump {
         font-size: 24px;
@@ -299,5 +293,15 @@ body {
 
     .box2 {
         flex-direction: column-reverse;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .box .img {
+        width: 100%;
+
+        img {
+            width: 40%;
+        }
     }
 }
