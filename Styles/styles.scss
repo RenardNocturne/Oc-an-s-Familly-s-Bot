@@ -98,61 +98,49 @@ body {
     width: 100%;
     margin-bottom: 5%;
 
-    .title {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-
-        h1 {
-            @include txt (72px, 600, transparent, 'Baloo Tammudu 2');
-            background: linear-gradient(to right, #0049a8 5%, #BA1414 53%, #c9a00b 91%);
-            background-clip: text;
-            -webkit-background-clip: text;
-            text-align: center;
-        }
+    h1 {
+        @include txt (72px, 600, transparent, 'Baloo Tammudu 2');
+        background: linear-gradient(to right, #0049a8 5%, #BA1414 53%, #c9a00b 91%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        text-align: center;
+        width: 80%;
     }
 
-    .links {
-        width: 25%;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        text-align: center;
+    a {
+        text-decoration: none;
+        text-transform: uppercase;
+        @include txt (42px, 600, transparent);
+        background: linear-gradient(to right, #0049a8 5%, #BA1414 53%, #c9a00b 91%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        transition: transform 0.5s ease;
+        cursor: pointer;
+        margin-left: 0;
 
-        a {
-            text-decoration: none;
-            text-transform: uppercase;
-            @include txt (42px, 600, transparent);
-            background: linear-gradient(to right, #0049a8 5%, #BA1414 53%, #c9a00b 91%);
-            background-clip: text;
-            -webkit-background-clip: text;
-            position: relative;
-            transition: transform 0.5s ease;
-            cursor: pointer;
+        &:after {    
 
-            &:after {    
+            @include bef_aft (linear-gradient(to right, #0049a8 5%, #BA1414 53%, #c9a00b 91%));
+        }
 
-                @include bef_aft (linear-gradient(to right, #0049a8 5%, #BA1414 53%, #c9a00b 91%));
+        &:before {
+            @include bef_aft (linear-gradient(to bottom, #0049a8 5%, #BA1414 53%, #c9a00b 91%), -6px, -10px, 0px, 4px);
+        }
+
+        &:hover {
+            transform: translate(4px, -4px);
+
+            &:after {
+                width: calc(100% + 8px); 
             }
     
             &:before {
-                @include bef_aft (linear-gradient(to bottom, #0049a8 5%, #BA1414 53%, #c9a00b 91%), -6px, -10px, 0px, 4px);
-            }
-    
-            &:hover {
-                transform: translate(4px, -4px);
-    
-                &:after {
-                    width: calc(100% + 8px); 
-                }
-        
-                &:before {
-                    height: 50%;
-                }
+                height: 50%;
             }
         }
     }
 }
+
 
 
 .wrapper {
@@ -262,20 +250,18 @@ body {
 @media screen and (max-width: 1273px) {
     .top {
         flex-direction: column;
-        margin-top: -50px;
-
-        .links {
-            width: auto;
-            margin-top: -50px;
-        }
     }
 }
 
 @media screen and (max-width: 1000px) {
 
-    .title {
-        margin-top: 25px;
-        line-height: 90px;
+    .top {
+        h1 {
+            line-height: 90px;
+        }
+        a {
+            margin-top: -50px;
+        }
     }
     .box {
         flex-direction: column;
@@ -290,7 +276,12 @@ body {
 
         .content {
             width: 90%;
-            padding: 0 5%
+            padding: 0 5%;
+
+            p {
+                font-size: 28px;
+                line-height: calc(normal + 1px);
+            }
         }
 
         img {

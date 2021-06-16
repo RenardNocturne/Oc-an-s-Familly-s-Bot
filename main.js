@@ -15,7 +15,7 @@ ScrollReveal().reveal('.entryTitle', {
     scale: 0.5,
 });
 
-ScrollReveal().reveal('.links', {
+ScrollReveal().reveal('.invite', {
     duration: 1000,
     distance: '100%',
     origin: 'right',

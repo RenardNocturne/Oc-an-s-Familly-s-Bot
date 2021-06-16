@@ -63,12 +63,7 @@ body {
   width: 100%;
   margin-bottom: 5%;
 }
-.top .title {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-.top .title h1 {
+.top h1 {
   font-size: 72px;
   font-weight: 600;
   color: transparent;
@@ -77,15 +72,9 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   text-align: center;
+  width: 80%;
 }
-.top .links {
-  width: 25%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  text-align: center;
-}
-.top .links a {
+.top a {
   text-decoration: none;
   text-transform: uppercase;
   font-size: 42px;
@@ -95,11 +84,11 @@ body {
   background: linear-gradient(to right, #0049a8 5%, #BA1414 53%, #c9a00b 91%);
   background-clip: text;
   -webkit-background-clip: text;
-  position: relative;
   transition: transform 0.5s ease;
   cursor: pointer;
+  margin-left: 0;
 }
-.top .links a:after {
+.top a:after {
   bottom: -6px;
   content: "";
   height: 4px;
@@ -109,7 +98,7 @@ body {
   transition: width 0.5s ease, height 0.5s ease;
   width: 0;
 }
-.top .links a:before {
+.top a:before {
   bottom: -6px;
   content: "";
   height: 0px;
@@ -119,13 +108,13 @@ body {
   transition: width 0.5s ease, height 0.5s ease;
   width: 4px;
 }
-.top .links a:hover {
+.top a:hover {
   transform: translate(4px, -4px);
 }
-.top .links a:hover:after {
+.top a:hover:after {
   width: calc(100% + 8px);
 }
-.top .links a:hover:before {
+.top a:hover:before {
   height: 50%;
 }
 
@@ -244,17 +233,14 @@ body {
 @media screen and (max-width: 1273px) {
   .top {
     flex-direction: column;
-    margin-top: -50px;
-  }
-  .top .links {
-    width: auto;
-    margin-top: -50px;
   }
 }
 @media screen and (max-width: 1000px) {
-  .title {
-    margin-top: 25px;
+  .top h1 {
     line-height: 90px;
+  }
+  .top a {
+    margin-top: -50px;
   }
 
   .box {
@@ -269,6 +255,10 @@ body {
   .box .content {
     width: 90%;
     padding: 0 5%;
+  }
+  .box .content p {
+    font-size: 28px;
+    line-height: calc(normal + 1px);
   }
   .box img {
     width: 15%;
