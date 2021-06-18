@@ -305,3 +305,13 @@ body {
         }
     }
 }
+
+@media screen and (max-width: 300px) {
+    .top h1 {
+        font-size: 60px;
+        line-height: 70px;
+    }
+    .wrapper .box .content h1 {
+        font-size: 31px;
+    }
+}
